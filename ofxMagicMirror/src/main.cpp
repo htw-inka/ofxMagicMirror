@@ -6,6 +6,6 @@
 int main( ){
     // can be OF_WINDOW or OF_FULLSCREEN
 	//ofSetupOpenGL(1024,768, OF_WINDOW);
-    ofSetupOpenGL(320, 240, OF_WINDOW); // resize after cam. init
+    ofSetupOpenGL(320, 240, OF_WINDOW); // will resized after cam init to cam resolution
 	ofRunApp(new MagicMirrorApp());
 }

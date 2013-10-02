@@ -71,34 +71,8 @@ void MagicMirrorApp::initDetection(const float arucoMarkerSize) throw (cv::Excep
 }
 
 //--------------------------------------------------------------
-void MagicMirrorApp::windowResized(int w, int h){
-//    view.resize(w, h);
-}
-
-//--------------------------------------------------------------
-void MagicMirrorApp::keyPressed(int key){}
-
-//--------------------------------------------------------------
 void MagicMirrorApp::keyReleased(int key){
     if (key == 'f') {
         ofToggleFullscreen();
     }
 }
-
-//--------------------------------------------------------------
-void MagicMirrorApp::mouseMoved(int x, int y ){}
-
-//--------------------------------------------------------------
-void MagicMirrorApp::mouseDragged(int x, int y, int button){}
-
-//--------------------------------------------------------------
-void MagicMirrorApp::mousePressed(int x, int y, int button){}
-
-//--------------------------------------------------------------
-void MagicMirrorApp::mouseReleased(int x, int y, int button){}
-
-//--------------------------------------------------------------
-void MagicMirrorApp::gotMessage(ofMessage msg){}
-
-//--------------------------------------------------------------
-void MagicMirrorApp::dragEvent(ofDragInfo dragInfo){ }

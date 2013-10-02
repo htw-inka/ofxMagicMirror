@@ -56,7 +56,7 @@ private:
     void drawContentElem(ContentElem * const elem, unsigned long nowMs);
     
     MagicMirrorApp *ctrl;        // pointer to instance of main app
-    ContentLoader *contents;    // pointer to singleton instance of content holder
+    ContentLoader *contents;     // pointer to singleton instance of content holder
     
     set<ContentElem *> curDetectedElems;    // currently detected content elements
     

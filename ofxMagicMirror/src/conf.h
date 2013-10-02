@@ -27,7 +27,7 @@
 
 #define CONF_STOPWATCH      0       // enable benchmarking output
 
-#define CONF_MARKER_RECOGNITION_TIMEOUT_MILLISEC    250     // 240 for testing
-#define CONF_RESTART_VIDEO_AFTER_MILLISEC           2500    //
+#define CONF_MARKER_RECOGNITION_TIMEOUT_MILLISEC    250     // marker timout after which it will not be displayed anymore
+#define CONF_RESTART_VIDEO_AFTER_MILLISEC           2500    // time since last marker tracking after which a video will be completely stopped
 
 #endif

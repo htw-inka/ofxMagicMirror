@@ -62,6 +62,9 @@ public:
      */
     ContentElem *getContent(const int id);
     
+    /**
+     * Return the complete contents map.
+     */
     ContentMap &getAllContents() { return contents; };
     
 private:

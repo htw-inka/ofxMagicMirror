@@ -17,24 +17,37 @@
 
 class GLView;
 
+/**
+ * Main controller class. Handles the setup, draw and update cycles.
+ */
 class MagicMirrorApp : public ofBaseApp {
 
 	public:
+        /**
+         * Default deconstructor.
+         */
+        ~MagicMirrorApp();
+    
+        /**
+         * Setup the application.
+         */
 		void setup();
+    
+        /**
+         * Update status: Get a new camera frame and process it.
+         */
 		void update();
+    
+        /**
+         * Tell GLView to draw the frame.
+         */
 		void draw();
 
-		void keyPressed(int key);
+        /**
+         * Handles key input.
+         * 'f' is for toggling fullscreen display mode.
+         */
 		void keyReleased(int key);
-		void mouseMoved(int x, int y );
-		void mouseDragged(int x, int y, int button);
-		void mousePressed(int x, int y, int button);
-		void mouseReleased(int x, int y, int button);
-		void windowResized(int w, int h);
-		void dragEvent(ofDragInfo dragInfo);
-		void gotMessage(ofMessage msg);
-    
-        ~MagicMirrorApp();
     
         /**
          * Return the marker size in meters.

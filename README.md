@@ -15,6 +15,16 @@ These contents have to be added to the `res/contents` folder using the following
 
 Where _id_ is the marker ID and _type_ can be either _img_, _vid_ or _obj_. You can set _name_ as you wish.
 
+## Used APIs and libraries
+
+This is an application [OpenFrameworks](http://openframeworks.cc)-based application. It uses the [_ArUco_ library](http://www.uco.es/investiga/grupos/ava/node/26) for marker recognition and OpenGL for display. It uses [Nate Robins'](http://user.xmission.com/~nate/) _GLM_ library for OBJ Wavefront fromat model loading.
+
+## Compiling
+
+To compile the project, you must have a folder `ofx` in the project root containing (or linking to) the openFrameworks library. This project has been successully compiled under Mac OSX 10.8 with openFrameworks v0.8.
+
+Note that you should modify `src/conf.h` for the proper camera device ID and camera resolution. You should also calibrate your camera and save the intrinsic matrix output to `res/cams`.
+
 ## License
 
 The program is released under BSD 3-clause license which is contained in the file `LICENSE`.
