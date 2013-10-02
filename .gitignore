@@ -1,0 +1,22 @@
+#rsync noise
+.rsync_*
+
+#osx noise:
+.DS_Store
+
+#xcode noise:
+*.pbxuser
+*.perspective
+*.perspectivev3
+ 
+*.mode1v3
+*.mode2v3
+
+**/*.xcodeproj/xcuserdata/**
+**/*.xcodeproj/project.xcworkspace/xcuserdata/**
+ofxMagicMirror/ofxMagicMirror/ofxMagicMirror.xcodeproj/project.xcworkspace/xcuserdata/
+ofxMagicMirror/ofxMagicMirror/ofxMagicMirror.xcodeproj/xcuserdata/
+
+# openframeworks noise
+ofxMagicMirror/ofx
+ofxMagicMirror/ofxMagicMirror/bin
