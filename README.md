@@ -10,9 +10,12 @@ _Magic Mirror_ is an augmented reality application designed for showing differen
 
 These contents have to be added to the `res/contents` folder.
 
-There are two different versions available, using different libraries and with differing development states. 
+There are two different versions available, using different libraries and with differing development states.
+Both versions are [OpenFrameworks](http://openframeworks.cc)-based applications and use [Nate Robins'](http://user.xmission.com/~nate/) _GLM_ library for OBJ Wavefront fromat model loading.
 
 ## ofxMagicMirror
+
+This Version uses the [_ArUco_ library](http://www.uco.es/investiga/grupos/ava/node/26) for marker recognition and OpenGL for display. 
 
 The content folders have to follow naming convention to associate the content with a marker ID and a content type:
 
@@ -21,9 +24,16 @@ The content folders have to follow naming convention to associate the content wi
 
 Where _id_ is the marker ID and _type_ can be either _img_, _vid_ or _obj_. You can set _name_ as you wish.
 
-## Used APIs and libraries
+Get more detailed Information [here](ofxMagicMirror/).
 
-This is an application [OpenFrameworks](http://openframeworks.cc)-based application. It uses the [_ArUco_ library](http://www.uco.es/investiga/grupos/ava/node/26) for marker recognition and OpenGL for display. It uses [Nate Robins'](http://user.xmission.com/~nate/) _GLM_ library for OBJ Wavefront fromat model loading.
+## ofxMagicMirrorARTP
+
+This Version uses the [_ARToolKitPlus_ library](https://launchpad.net/artoolkitplus) for marker recognition and OpenGL for display. 
+
+The content folder includes a _config.xml_ file, where you can add or change the loaded content, associate with a marker ID.
+There are several options to specify the content type (_img_, _vid_ or _obj_), the file locations, the scaling factor, an initial rotation and translation in 3D space and if you want the content to be shown with transparency.
+
+Get more detailed Information [here](ofxMagicMirrorARTP/).
 
 ## Compiling
 

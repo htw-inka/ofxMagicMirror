@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contents>
+    
+    <element>
+        <markerId>57</markerId>
+        <name>HTW Video</name>
+        <type>vid</type>
+        <alpha>false</alpha>
+        <files>
+            <file>htwVideo/output.mpeg</file>
+        </files>
+        <scaling>1.0</scaling>
+    </element>
+    
+    <!--element>
+        <markerId>XX</markerId>
+        <name>Titel</name>
+        <type>vid/obj/img</type>
+        <alpha>true/false</alpha>
+        <files>
+            <file>path/starting/from/contents/folder</file>
+	    <file>example/3dObject.obj</file>
+            <file>example/3DObjectTexture.png</file>
+        </files>
+        <scaling>0...X</scaling>
+        <posTranslation>
+            <x>0</x>
+            <y>0</y>
+            <z>0</z>
+        </posTranslation>
+	<rotation>
+            <x>180</x>
+            <y>0</y>
+            <z>0</z>
+        </rotation>
+    </element-->
+  
+</contents>

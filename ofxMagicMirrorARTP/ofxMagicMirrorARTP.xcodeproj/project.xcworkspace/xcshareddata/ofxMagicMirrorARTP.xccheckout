@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D6D46439-1B90-4549-A8A4-87A83352A0D1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ofxMagicMirrorARTP</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE147708-1A7F-49ED-B01D-52D922DDA6BA</key>
+		<string>ssh://repo.inka.f4.htw-berlin.de/minerva/isl/magicmirror</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ofxMagicMirror/ofxMagicMirrorARTP/ofxMagicMirrorARTP.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE147708-1A7F-49ED-B01D-52D922DDA6BA</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://repo.inka.f4.htw-berlin.de/minerva/isl/magicmirror</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE147708-1A7F-49ED-B01D-52D922DDA6BA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE147708-1A7F-49ED-B01D-52D922DDA6BA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>magicmirror</string>
+		</dict>
+	</array>
+</dict>
+</plist>
