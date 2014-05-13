@@ -46,3 +46,7 @@ Note that you should modify `src/conf.h` for the proper camera device ID and cam
 The program is released under BSD 3-clause license which is contained in the file `LICENSE`.
 
 The included [_ArUco_ library](http://www.uco.es/investiga/grupos/ava/node/26) is developed by the [Universidad de Córdoba](http://www.uco.es/).
+The included [_ARToolKitPlus_ library](https://launchpad.net/artoolkitplus) is released under GNU GPL v3 license. 
+ARToolKit was originally developed by Hirokazu Kato of Nara Institute of Science and Technology and was released by the University of Washington HIT Lab. 
+Currently it is maintained as an opensource project hosted on SourceForge.
+
