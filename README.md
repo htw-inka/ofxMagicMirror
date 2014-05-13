@@ -8,7 +8,13 @@ _Magic Mirror_ is an augmented reality application designed for showing differen
 * video (also with an alpha mask [like here](http://jakearchibald.com/scratch/alphavid/)
 * 3D models (in Wavefront OBJ format)
 
-These contents have to be added to the `res/contents` folder using the following naming convention to associate the content with a marker ID and a content type:
+These contents have to be added to the `res/contents` folder.
+
+There are two different versions available, using different libraries and with differing development states. 
+
+## ofxMagicMirror
+
+The content folders have to follow naming convention to associate the content with a marker ID and a content type:
 
 * `res/contents/<id>_<type>_<name>/<name>.<ext>`
 * image example: `res/contents/42_img_helloworld/helloworld.png`
