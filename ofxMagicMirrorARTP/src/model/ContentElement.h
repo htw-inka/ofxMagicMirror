@@ -13,6 +13,7 @@
 
 #include "ofMain.h"
 #include "Data.h"
+#include "ImgData.h"
 
 /**
  * Define the content types.
@@ -38,7 +39,12 @@ class ContentElement {
     
         float elemScale;                    // the (configured initial) scale value for the content element
         float elemRot[3];                   // the (configured initial) rotation (x, y, z) for the content element
-        float elemTrans[3];                   // the (configured initial) translation (x, y, z) for the content element
+        float elemTrans[3];                 // the (configured initial) translation (x, y, z) for the content element
+    
+        bool showExpl;                      // if an explanation is shown next to the content
+        ImgData* explImg;                   //
+        float explTrans[3];                 //
+        float explScale;                    //
     
         /**
          * Returns the average position and rotation of a camera from the filter array.
@@ -91,6 +97,11 @@ class ContentElement {
          * Set a new ModelViewMatrix
          */
         void setModelViewMatrix(GLfloat* mat);
+    
+        /**
+         * Set the explanation Values (Image, Translation)
+         */
+        void setExplanation(ImgData* img, float scale, float x, float y, float z);
     
         /**
          * Return current ModelViewMatrix

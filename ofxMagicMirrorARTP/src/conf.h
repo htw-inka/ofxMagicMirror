@@ -15,18 +15,22 @@
 #define CONF_CONTENT_DIR        "./res/contents"    // folder where all the contents reside
 
 #define CONF_INFO_ANIM_PATH     "./res/contents/infoAnimation/info.gif"
-#define CONF_INFO_SHOW_ON_START 0                   // true (1) or false (0)
+#define CONF_INFO_SHOW_ON_START 1                   // true (1) or false (0)
 #define CONF_INFO_SPEED         8
 #define CONF_INFO_HEIGHT        250
-#define CONF_INFO_SHOW_ANI_AFTER_MILSEC   60000     // time without a marker recognised, after which a Animation is shown
+#define CONF_INFO_SHOW_ANI_AFTER_MILSEC   6000     // time without a marker recognised, after which a Animation is shown
+#define CONF_INFO_SIDE          0                  // rotate the info animation (0 = bottom, 1 = left, 2 = right)
+#define CONF_INFO_SIZE          250
 
 // request cam resolution in pixel (width, height), number of camera and the camera config file
 // ***********************************
 // for old MacBook (Pro)
+
 #define CONF_CAM_W              640
 #define CONF_CAM_H              480
 #define CONF_CAM_ID             0
 #define CONF_CAM_FILE           "./res/cams/MacBook_intrinsic.xml"
+
 
 // Apple Screen or new MacBook Build in Cam
 /*
@@ -53,4 +57,4 @@
         
 #define CONF_RECOGNITION_TIMEOUT_MILLISEC    500     // marker timout after which it will not be displayed anymore
 #define CONF_RESTART_VIDEO_AFTER_MILLISEC    3000    // timeout when a video will be completely stopped
-#define CONF_SMOTHING_FILTER_WINDOW          5       // how many values should be considered smothing the rotation and translation
+#define CONF_SMOTHING_FILTER_WINDOW          10       // how many values should be considered smothing the rotation and translation

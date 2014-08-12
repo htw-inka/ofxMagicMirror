@@ -76,7 +76,7 @@ void ContentLoader::loadContents(string path) throw (runtime_error) {
                 // fill type data
                 fillTypeDate(&confXml, contentElem, path);
                 // configure element
-                configureContentElem(&confXml, contentElem);
+                configureContentElem(&confXml, contentElem, path);
                 // insert the new element
                 contents.insert(pair<int, ContentElement *>(markerId, contentElem));
             }
@@ -153,9 +153,13 @@ void ContentLoader::fillTypeDate(ofXml* confXml, ContentElement* elem, string pa
             
             confXml->setToParent();
             bool alpha = confXml->getBoolValue("alpha");
+            float vol = 1.0f;
+            if (confXml->exists("vol")) {
+                vol  = confXml->getFloatValue("vol");
+            }
             confXml->setTo("files");
             // create and assign the video objekt
-            elem->typeData = new VidData(vidPlayer, alpha);
+            elem->typeData = new VidData(vidPlayer, alpha, vol);
                 
             cout << "INFO: loaded video " << fullPath << " (is alpha: " << alpha << ")" << endl;
             break;  // no more files needed
@@ -187,12 +191,40 @@ void ContentLoader::fillTypeDate(ofXml* confXml, ContentElement* elem, string pa
 }
 
 //--------------------------------------------------------------
-void ContentLoader::configureContentElem(ofXml* confXml, ContentElement* elem) {
+void ContentLoader::configureContentElem(ofXml* confXml, ContentElement* elem, string path) {
+    
+    // add explanation 
+    if (confXml->exists("explanation") && confXml->exists("explanation/file")) {
+        ofPixels pxls;
+        string file     = confXml->getValue("explanation/file");
+        string fullPath = path + file;
+        bool imgLoaded  = ofLoadImage(pxls, fullPath);
+        
+        if (imgLoaded) {
+            bool alpha = ( pxls.getNumChannels() == 4 ) ? true : false;
+            
+            float scale = 1;
+            if (confXml->exists("explanation/scaling")) {
+                scale = confXml->getFloatValue("explanation/scaling");
+            }
+            
+            elem->setExplanation(
+                new ImgData( pxls, pxls.getWidth(), pxls.getHeight(), alpha),
+                scale,
+                confXml->getFloatValue("explanation/posTranslation/x"),
+                confXml->getFloatValue("explanation/posTranslation/y"),
+                confXml->getFloatValue("explanation/posTranslation/z")
+            );
+        }
+    }
+
+    // set content init scaling
     float scale = confXml->getFloatValue("scaling");
     if (scale > 0) {
         elem->setElemScaling(scale);
     }
     
+    // set content init rotation
     if (confXml->exists("rotation")) {
         int rotX = confXml->getIntValue("rotation/x");
         int rotY = confXml->getIntValue("rotation/y");
@@ -200,6 +232,7 @@ void ContentLoader::configureContentElem(ofXml* confXml, ContentElement* elem) {
         elem->setElemRotation(rotX, rotY, rotZ);
     }
     
+    // set content init position translation
     /* IMPORTANT ... this has to be set last. 
      * To center the content according to height and width, 
      * typeData needs to be filled and the scaling has to be set 

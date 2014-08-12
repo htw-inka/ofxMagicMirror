@@ -107,6 +107,7 @@ void GLView::drawElement(ContentElement* elem) {
         drawMarkerID(elem);
         drawAxes();
 #endif
+    ofPopMatrix();
 }
 
 //--------------------------------------------------------------

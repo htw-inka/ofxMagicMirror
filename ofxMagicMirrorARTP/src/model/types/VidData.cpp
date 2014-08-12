@@ -10,12 +10,16 @@
 #include "Tools.h"
 
 //--------------------------------------------------------------
-VidData::VidData(ofVideoPlayer* vidPlayer, bool alpha) {
+VidData::VidData(ofVideoPlayer* vidPlayer, bool alpha, float vol) {
     this->vidPlayer     = vidPlayer;
     this->startPlayback = true;
     this->alpha         = alpha;
     this->w             = vidPlayer->getWidth();
     this->h             = vidPlayer->getHeight();
+    
+    // set Volume
+    cout << "Volume: " << vol << endl;
+    this->vidPlayer->setVolume(vol);
 }
 
 //--------------------------------------------------------------
@@ -93,4 +97,9 @@ int VidData::getHeight() {
 //--------------------------------------------------------------
 bool VidData::isAlpha() {
     return alpha;
+}
+
+//--------------------------------------------------------------
+bool VidData::isPaused() {
+    return vidPlayer->isPaused();
 }

@@ -86,7 +86,7 @@ class ContentLoader {
         /**
          * Configure a content element. Will set rotation, translation and scaling
          */
-        void configureContentElem(ofXml* confXml, ContentElement* elem);
+        void configureContentElem(ofXml* confXml, ContentElement* elem, string path);
 
         /**
          * map containing all content elements (as pointers) associated with a

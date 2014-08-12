@@ -27,6 +27,14 @@ ContentElement::ContentElement(int markerId, string name, ContentType type) {
     this->elemTrans[1]      = 0;
     this->elemTrans[2]      = 0;
     
+    // Explanation values
+    this->showExpl          = false;
+    this->explImg           = NULL;
+    this->explTrans[0]      = 0;
+    this->explTrans[0]      = 0;
+    this->explTrans[0]      = 0;
+    this->explScale         = 1;
+    
     // By default the filter windows (arrays) are filled with 0
     this->camPosWindow = new float[CONF_SMOTHING_FILTER_WINDOW * 3];
     this->camRotWindow = new float[CONF_SMOTHING_FILTER_WINDOW * 3];
@@ -55,19 +63,40 @@ void ContentElement::resetCamParams() {
 void ContentElement::draw() {
     if (type != _UNKNOWN) {
         
-        
         // put the element at the right place
         ofTranslate(elemTrans[0], elemTrans[1], elemTrans[2]);
         
-        // scale up or down, according to config
-        ofScale(elemScale, elemScale, elemScale);
+        if (showExpl && explImg != NULL) {
+            if (type == VID) {
+                VidData* elemVid = ((VidData*)typeData);
+                if (elemVid->isPaused()) {
+                    return;
+                }
+            }
+            
+            ofPushMatrix();
+                // Disable the overlap effect of the occlusion cube
+                glDisable(GL_STENCIL_TEST);
+                // place and draw the explanation image
+                ofTranslate(explTrans[0], explTrans[1], explTrans[2]);
+                ofScale(explScale, explScale, explScale);
+                explImg->draw();
+            ofPopMatrix();
+        }
         
-        // rotate to fit model directions, according to config
-        ofRotate(elemRot[0], 1.0f, 0.0f, 0.0f);
-        ofRotate(elemRot[1], 0.0f, 1.0f, 0.0f);
-        ofRotate(elemRot[2], 0.0f, 0.0f, 1.0f);
+        ofPushMatrix();
+            // scale up or down, according to config
+            ofScale(elemScale, elemScale, elemScale);
         
-        typeData->draw();
+            // rotate to fit model directions, according to config
+            ofRotate(elemRot[0], 1.0f, 0.0f, 0.0f);
+            ofRotate(elemRot[1], 0.0f, 1.0f, 0.0f);
+            ofRotate(elemRot[2], 0.0f, 0.0f, 1.0f);
+            // Enable the overlap effect of the occlusion cube
+            glEnable(GL_STENCIL_TEST);
+            typeData->draw();
+        ofPopMatrix();
+        
     }
 }
 
@@ -125,6 +154,18 @@ void ContentElement::setModelViewMatrix(GLfloat* mat) {
         }
     } else {
         memcpy(modelViewMatrix, mat, 16 * sizeof(GLfloat));
+    }
+}
+
+//--------------------------------------------------------------
+void ContentElement::setExplanation(ImgData* img, float scale, float x, float y, float z) {
+    if (img != NULL) {
+        showExpl        = true;
+        explImg         = img;
+        explTrans[0]    = x;
+        explTrans[1]    = y;
+        explTrans[2]    = z;
+        explScale       = scale;
     }
 }
 

@@ -6,10 +6,20 @@
         <name>HTW Video</name>
         <type>vid</type>
         <alpha>false</alpha>
+        <vol>1</vol>
         <files>
             <file>htwVideo/output.mpeg</file>
         </files>
         <scaling>1.0</scaling>
+        <explanation>
+            <file>htwVideo/info.png</file>
+            <scaling>0.8</scaling>
+            <posTranslation>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </posTranslation>
+        </explanation>
     </element>
     
     <!--element>
@@ -17,6 +27,7 @@
         <name>Titel</name>
         <type>vid/obj/img</type>
         <alpha>true/false</alpha>
+        <vol>0.0...1</vol>
         <files>
             <file>path/starting/from/contents/folder</file>
 	    <file>example/3dObject.obj</file>
@@ -28,11 +39,20 @@
             <y>0</y>
             <z>0</z>
         </posTranslation>
-	<rotation>
+        <rotation>
             <x>180</x>
             <y>0</y>
             <z>0</z>
         </rotation>
+        <explanation>
+            <file>path/starting/from/contents/folder/info.png</file>
+            <scaling>0...X</scaling>
+            <posTranslation>
+                <x>0</x>
+                <y>0</y>
+                <z>0</z>
+            </posTranslation>
+        </explanation>
     </element-->
   
 </contents>

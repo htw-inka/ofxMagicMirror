@@ -43,9 +43,10 @@ class InfoAnimation {
 
     private:
         int movement;
-        int y;
+        int pos;
         int top;
         int bottom;
+        int gifPos;
     
         ofVideoPlayer* player;
 };

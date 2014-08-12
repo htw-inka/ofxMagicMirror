@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E05F7A318C629080049707F /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E05F7A218C628720049707F /* openFrameworksDebug.a */; };
 		2E0CE1F618917D1A0061AAD1 /* GLView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CE1F418917D1A0061AAD1 /* GLView.cpp */; };
 		2E0CE1F91891D1820061AAD1 /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CE1F71891D1810061AAD1 /* Tools.cpp */; };
 		2E0CE1FC1891D1990061AAD1 /* ContentLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E0CE1FA1891D1990061AAD1 /* ContentLoader.cpp */; };
 		2E3C111C188D85820069AAEA /* MagicMirrorApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E3C111A188D857F0069AAEA /* MagicMirrorApp.cpp */; };
+		2E769493199A6D5300A2D4F0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E769492199A6D5300A2D4F0 /* GLUT.framework */; };
+		2E769495199A6DA200A2D4F0 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E769494199A6DA200A2D4F0 /* openFrameworksDebug.a */; };
 		2EB1BC9918903A32005512DB /* libARToolKitPlus.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB1BC9818903A32005512DB /* libARToolKitPlus.dylib */; };
 		2EB1BCB318908E30005512DB /* ContentElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1BCA918908E30005512DB /* ContentElement.cpp */; };
 		2EB1BCB418908E30005512DB /* ImgData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EB1BCAC18908E30005512DB /* ImgData.cpp */; };
@@ -68,7 +69,6 @@
 		E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424410CC5A17004149E2 /* AppKit.framework */; };
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
-		E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E7E077E515D3B63C0020DFD4 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E415D3B63C0020DFD4 /* CoreVideo.framework */; };
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
@@ -106,6 +106,8 @@
 		2E0CE1FB1891D1990061AAD1 /* ContentLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentLoader.h; sourceTree = "<group>"; };
 		2E3C111A188D857F0069AAEA /* MagicMirrorApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MagicMirrorApp.cpp; sourceTree = "<group>"; };
 		2E3C111B188D85800069AAEA /* MagicMirrorApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicMirrorApp.h; sourceTree = "<group>"; };
+		2E769492199A6D5300A2D4F0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../../System/Library/Frameworks/GLUT.framework; sourceTree = "<group>"; };
+		2E769494199A6DA200A2D4F0 /* openFrameworksDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = openFrameworksDebug.a; path = ../../../OF/of_v0.8.0/libs/openFrameworksCompiled/lib/osx/openFrameworksDebug.a; sourceTree = "<group>"; };
 		2EB1BC9818903A32005512DB /* libARToolKitPlus.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libARToolKitPlus.dylib; sourceTree = "<group>"; };
 		2EB1BC9A18906A19005512DB /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
 		2EB1BCA918908E30005512DB /* ContentElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContentElement.cpp; sourceTree = "<group>"; };
@@ -211,10 +213,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E05F7A318C629080049707F /* openFrameworksDebug.a in Frameworks */,
+				2E769495199A6DA200A2D4F0 /* openFrameworksDebug.a in Frameworks */,
+				2E769493199A6D5300A2D4F0 /* GLUT.framework in Frameworks */,
 				E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */,
 				E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */,
-				E4EB6799138ADC1D00A09F29 /* GLUT.framework in Frameworks */,
 				E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */,
 				E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */,
 				E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */,
@@ -437,6 +439,8 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				2E769494199A6DA200A2D4F0 /* openFrameworksDebug.a */,
+				2E769492199A6D5300A2D4F0 /* GLUT.framework */,
 				2EFCAC3418C0EA9400AC4E0F /* res */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
@@ -773,6 +777,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					"\"$(SRCROOT)/src/lib/ARToolKitPlus-2.3.0/lib\"",
 					"\"$(SRCROOT)/src/libs/ARToolKitPlus/lib\"",
+					"\"$(SRCROOT)/../../../OF/of_v0.8.0/libs/openFrameworksCompiled/lib/osx\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;
@@ -871,6 +876,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"\"$(SRCROOT)/src/lib/ARToolKitPlus-2.3.0/lib\"",
 					"\"$(SRCROOT)/src/libs/ARToolKitPlus/lib\"",
+					"\"$(SRCROOT)/../../../OF/of_v0.8.0/libs/openFrameworksCompiled/lib/osx\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = NO;

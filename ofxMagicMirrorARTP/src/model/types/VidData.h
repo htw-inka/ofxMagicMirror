@@ -18,7 +18,7 @@ class VidData : public Data {
         /**
          * The Constructor will set and calculate all the attributes
          */
-        VidData(ofVideoPlayer* vidPlayer, bool alpha);
+        VidData(ofVideoPlayer* vidPlayer, bool alpha, float vol = 1.0f);
         
         /**
          * Cleanup videoplayer etc.
@@ -51,6 +51,7 @@ class VidData : public Data {
         int getWidth();
         int getHeight();
         bool isAlpha();
+        bool isPaused();
     
     private:
         ofVideoPlayer* vidPlayer;   // Ofx video capturerer to read video frames
